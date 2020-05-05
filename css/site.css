@@ -2,3 +2,29 @@ form > span
 {
     color: red;
 }
+
+input[type = "text"] 
+{
+    margin-bottom: 1em; 
+}
+
+form label
+{
+    display: inline-block;
+    text-align: right;
+    margin-right: 2ems;
+}
+
+form button
+{
+    margin-top: .5em;
+}
+
+@media only screen and (max-width: 600px)
+{
+    form label
+    {
+        text-align: left;
+        width: 100%;
+    }
+}
