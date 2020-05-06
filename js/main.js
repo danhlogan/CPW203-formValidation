@@ -6,6 +6,10 @@ function main() {
     resetErrorMessages();
     isTextPresent("first-name", "First name is required");
     isTextPresent("last-name", "Last name is required");
+    if (isTextPresent("first-name", "First name is required") &&
+        isTextPresent("last-name", "Last name is required") == true) {
+        displayWelcome();
+    }
 }
 function resetErrorMessages() {
     var allSpans = document.querySelectorAll("form span");
@@ -28,4 +32,14 @@ function isTextPresent(id, errorMsg) {
         return false;
     }
     return true;
+}
+function displayWelcome() {
+    var fNameBox = document.getElementById("first-name");
+    var fNameText = fNameBox.value;
+    var lNameBox = document.getElementById("last-name");
+    var lNameText = lNameBox.value;
+    document.getElementById("welcome").innerText = "Welcome to CPTC, " + " "
+        + fNameText + " " + lNameText + "!";
+    fNameBox.value = "";
+    lNameBox.value = "";
 }

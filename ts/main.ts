@@ -7,9 +7,16 @@ window.onload = function()
 function main():void
 {
     resetErrorMessages()
-    isTextPresent("first-name","First name is required")
-    isTextPresent("last-name", "Last name is required")
-}
+    isTextPresent("first-name","First name is required")  
+    isTextPresent("last-name", "Last name is required") 
+    
+    if(isTextPresent("first-name","First name is required") &&
+    isTextPresent("last-name", "Last name is required") == true)
+    {
+        displayWelcome()
+    }
+}    
+    
 
 /**
  * Resets all the spans back to the default text
@@ -50,4 +57,22 @@ function isTextPresent(id: string, errorMsg: string):boolean
     }
 
     return true;
+}
+
+/**
+ * Displays a welcome message if user correctly inputs information
+ */
+function displayWelcome():void
+{
+    let fNameBox = <HTMLInputElement>document.getElementById("first-name")
+    let fNameText = fNameBox.value
+
+    let lNameBox = <HTMLInputElement>document.getElementById("last-name")
+    let lNameText = lNameBox.value
+    
+    document.getElementById("welcome").innerText = "Welcome to CPTC, " + " " 
+    + fNameText + " " + lNameText + "!"
+
+    fNameBox.value = ""
+    lNameBox.value = ""
 }
