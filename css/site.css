@@ -30,14 +30,19 @@ form label
 form button
 {
     margin-top: .5em;
-    transition: .3s;    
+    transition: .3s;   
 }
 
 button:hover
 {
     cursor: pointer;
+    color: blue;
+    border: 1px solid darkblue;
+}
+
+button:active
+{
     background-color: lightblue;
-    border: 1px solid lightblue;
 }
 
 @media only screen and (max-width: 600px)

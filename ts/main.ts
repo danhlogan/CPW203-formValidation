@@ -16,7 +16,20 @@ function main():void
  */
 function resetErrorMessages():void
 {
-    let allSpans = document.querySelectorAll
+    let allSpans = document.querySelectorAll("form span")
+    for(let i = 0; i < allSpans.length; i++)
+    {
+        let currSpan = <HTMLElement>allSpans[i]
+        if(currSpan.hasAttribute("data-required"))
+        {
+            currSpan.innerText = "*"
+        }
+
+        else
+        {
+            currSpan.innerText = ""
+        }
+    }
 }
 
 /**
