@@ -6,8 +6,17 @@ window.onload = function()
 
 function main():void
 {
+    resetErrorMessages()
     isTextPresent("first-name","First name is required")
     isTextPresent("last-name", "Last name is required")
+}
+
+/**
+ * Resets all the spans back to the default text
+ */
+function resetErrorMessages():void
+{
+    let allSpans = document.querySelectorAll
 }
 
 /**
@@ -22,7 +31,7 @@ function isTextPresent(id: string, errorMsg: string):boolean
 
     if (textBoxValue == "") 
     {
-        let errorSpan = <HTMLSpanElement>textBox.nextElementSibling
+        let errorSpan = <HTMLSpanElement>textBox.previousElementSibling
         errorSpan.innerText = errorMsg
         return false;
     }
