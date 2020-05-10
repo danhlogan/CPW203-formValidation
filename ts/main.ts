@@ -81,8 +81,8 @@ function displayWelcome():void
     document.getElementById("welcome").innerText = "Welcome to CPTC, " + " " 
     + fNameText + " " + lNameText + "!"
 
-    let bDay = document.getElementById("dob").value
-
+    let bDayBox =  <HTMLInputElement> document.getElementById("dob")
+    let bDay = bDayBox.value
 
     document.getElementById("dobDisplay").innerHTML = "Registered Birthday: " + bDay
 

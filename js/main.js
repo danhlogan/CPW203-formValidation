@@ -40,7 +40,8 @@ function displayWelcome() {
     var lNameText = lNameBox.value;
     document.getElementById("welcome").innerText = "Welcome to CPTC, " + " "
         + fNameText + " " + lNameText + "!";
-    var bDay = document.getElementById("dob").value;
+    var bDayBox = document.getElementById("dob");
+    var bDay = bDayBox.value;
     document.getElementById("dobDisplay").innerHTML = "Registered Birthday: " + bDay;
     fNameBox.value = "";
     lNameBox.value = "";
