@@ -15,7 +15,15 @@ function main():void
     {
         displayWelcome()
     }
-}    
+} 
+
+/* I did not create this function as the video instructed because I did things a little bit 
+differently. Birthdate will appear below the welcome message. 
+function isValidDate(input:String):boolean
+{
+    
+} 
+*/
     
 
 /**
@@ -72,6 +80,11 @@ function displayWelcome():void
     
     document.getElementById("welcome").innerText = "Welcome to CPTC, " + " " 
     + fNameText + " " + lNameText + "!"
+
+    let bDay = document.getElementById("dob").value
+
+
+    document.getElementById("dobDisplay").innerHTML = "Registered Birthday: " + bDay
 
     fNameBox.value = ""
     lNameBox.value = ""
